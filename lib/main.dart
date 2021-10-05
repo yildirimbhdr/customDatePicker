@@ -17,14 +17,14 @@ class MyApp extends StatelessWidget {
             child: CustomDatePicker(
               onSelected: (a) {},
               theme: CustomDatePickerThemeData(
-                selectedItemTextStyle:
-                    const TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                unSelectedItemTextStyle: const TextStyle(
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                    color: Colors.black),
-                buttonItemColor: Colors.white,
-              ),
+                  selectedItemTextStyle: const TextStyle(
+                      fontSize: 14, fontWeight: FontWeight.w400),
+                  unSelectedItemTextStyle: const TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.black),
+                  buttonItemColor: Colors.white,
+                  backgroundColor: Colors.black12),
               firstTime: DateTime.now(),
             ),
           ),
