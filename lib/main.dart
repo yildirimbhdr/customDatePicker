@@ -7,24 +7,29 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Material App',
-      theme: ThemeData.dark(),
+      title: 'Custom Date Picker',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.all(10),
-          child: Center(
+          padding: const EdgeInsets.symmetric(vertical: 50, horizontal: 10),
+          child: Align(
+            alignment: Alignment.topCenter,
             child: CustomDatePicker(
               onSelected: (a) {},
               theme: CustomDatePickerThemeData(
                   selectedItemTextStyle: const TextStyle(
-                      fontSize: 14, fontWeight: FontWeight.w400),
+                      fontSize: 14,
+                      fontWeight: FontWeight.w400,
+                      color: Colors.white),
                   unSelectedItemTextStyle: const TextStyle(
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                       color: Colors.black),
+                  backgroundColor: Colors.blue.withOpacity(0.3),
                   buttonItemColor: Colors.white,
-                  backgroundColor: Colors.black12),
+                  buttonBackgroundColor: Colors.blue,
+                  selectedItemBackground: Colors.blue,
+                  unSelectedItemBackground: Colors.blue.withOpacity(0.5)),
               firstTime: DateTime.now(),
             ),
           ),
